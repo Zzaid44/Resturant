@@ -1,6 +1,6 @@
 import express from "express"
-import { createCategory, deleteCategory, getAllCategories, getAllCategoriesById, getAllCategoryById, getAllCategoryByName, updateCategory } from "../controller/categories.Controller.js"
-import { product } from "../middleware/protect.middleware.js"
+import { createCategory, deleteCategory, getAllCategories,  getAllCategoryById, getAllCategoryByName, updateCategory } from "../controller/categories.Controller.js"
+import { protect } from "../middleware/protect.middleware.js"
 const router = express.Router()
 
 router.get('/users',protect , getAllCategories)
