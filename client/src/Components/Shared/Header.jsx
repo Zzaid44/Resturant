@@ -1,6 +1,8 @@
 import { AppBar, Box, IconButtyon, Toolbar } from "@mui/material";
-
+import { useNavigate } from "react-router-dom";
 export default function Header() {
+  const navigat = useNavigate();
+
   return (
     <>
       <AppBar position="static">
@@ -22,10 +24,16 @@ export default function Header() {
               gap: 3,
             }}
           >
-            <IconButtyon>Home</IconButtyon>
-            <IconButtyon>Products</IconButtyon>
-            <IconButtyon>Login</IconButtyon>
-            <IconButtyon>Register</IconButtyon>
+            <IconButtyon onClick={() => navigat("/")}>Home</IconButtyon>
+            <IconButtyon onClick={() => navigat("/products")}>
+              Products
+            </IconButtyon>
+            <IconButtyon onClick={() => navigat("/login")}>
+              Login
+            </IconButtyon>
+            <IconButtyon onClick={() => navigat("/register")}>
+              Register
+            </IconButtyon>
             <IconButtyon>About</IconButtyon>
             <IconButtyon>Contact</IconButtyon>
           </Box>

@@ -4,7 +4,7 @@ import api from "../api";
 export const useProducts = () => {
   const [products, setProducts] = useState([]);
 
-  //getallproducts
+  
   const getAllProducts = async () => {
     try {
       const res = await api.get("/products");
@@ -14,10 +14,10 @@ export const useProducts = () => {
     }
   };
 
-  // call the function everyminute
+
   useEffect(() => {
-    //apply effect on the functions inside
-    getAllProducts(); // the effects is calling the function
+    
+    getAllProducts(); 
   }, []);
   return { products };
 };
